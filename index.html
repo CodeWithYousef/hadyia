@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إلى حبيبتي ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      min-height: 100vh;
+      color: #4a1a2c;
+      overflow-x: hidden;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      animation: float 6s infinite ease-in;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(255, 77, 109, 0.2);
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #c9184a;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      color: #800f2f;
+      line-height: 1.8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .photo-card {
+      background: #fff;
+      padding: 12px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(255, 77, 109, 0.25);
+      transform: rotate(-2deg);
+      transition: transform 0.4s ease;
+    }
+
+    .photo-card:nth-child(even) {
+      transform: rotate(2deg);
+    }
+
+    .photo-card:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .photo-caption {
+      text-align: center;
+      padding: 12px 5px 5px;
+      font-style: italic;
+      color: #c9184a;
+      font-size: 1em;
+    }
+
+    .love-letter {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px 30px;
+      border-radius: 30px;
+      box-shadow: 0 10px 40px rgba(255, 77, 109, 0.2);
+      margin: 40px 0;
+      line-height: 2;
+      font-size: 1.15em;
+      border-right: 5px solid #ff4d6d;
+    }
+
+    .love-letter p {
+      margin-bottom: 18px;
+    }
+
+    .love-letter .signature {
+      text-align: left;
+      font-style: italic;
+      color: #c9184a;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #800f2f;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .love-letter {
+        padding: 25px 20px;
+        font-size: 1.05em;
+      }
+    }
+  </style>
+</head>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.body.addEventListener('click', function playOnce() {
+    document.getElementById('bgMusic').play();
+    document.body.removeEventListener('click', playOnce);
+  }, { once: true });
+</script>
+
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <div class="container">
+    <header>
+      <h1>إلى حبيبتي ❤️</h1>
+      <p class="subtitle">كل يوم معاكي هو هدية من ربنا</p>
+    </header>
+
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photo1.jpg" alt="ذكرى 1">
+        <p class="photo-caption">أول يوم شفتك فيه ✨</p>
+      </div>
+      <div class="photo-card">
+        <img src="photo2.jpg" alt="ذكرى 2">
+        <p class="photo-caption">أحلى لحظات معاكي 💕</p>
+      </div>
+      <div class="photo-card">
+        <img src="photo3.jpg" alt="ذكرى 3">
+        <p class="photo-caption">ضحكتك اللي بتملا حياتي 🌸</p>
+      </div>
+      <div class="photo-card">
+        <img src="photo4.jpg" alt="ذكرى 4">
+        <p class="photo-caption">وعدي ليكي للأبد 💍</p>
+      </div>
+      <div class="photo-card">
+        <img src="photo5.jpg" alt="ذكرى 5">
+        <p class="photo-caption">بحبك💗 💍</p>
+      </div>
+      <div class="photo-card">
+        <img src="photo6.jpg" alt="ذكرى 6">
+        <p class="photo-caption">اضحك الصورة تطلع حلوة 🥰</p>
+      </div>
+    </div>
+
+    <div class="love-letter">
+      <p>حبيبتي،</p>
+      <p>من أول يوم دخلتي فيه حياتي، كل حاجة اتغيرت وبقت أحلى. ضحكتك بقت أحلى صوت بسمعه، ووجودك جنبي بقى أمان مش لاقيه
+        في أي حتة تانية.</p>
+      <p>كل يوم بصحى فيه على وشك، بحمد ربنا إنه رزقني بيكي. إنتي مش بس مراتي، إنتي صاحبتي وحبيبتي وأمي وأختي وكل حاجة
+        حلوة في حياتي.</p>
+      <p>وعد مني ليكي: هفضل أحبك وأحتويكي وأخاف عليكي طول العمر، وهكون سندك في الحلو والوحش، وهفضل أختارك كل يوم من أول
+        وجديد.</p>
+      <p class="signature">بحبك جداً... بقلم يٌوسٌف ❤️</p>
+    </div>
+
+    <footer>
+      صُنعت بكل حب 💝
+    </footer>
+  </div>
+  <div style="text-align:center; margin:30px 0; font-size:1.3em; color:#c9184a; font-weight:bold;">
+  مع بعض من <span id="days"></span> يوم ❤️
+</div>
+<script>
+  const start = new Date('2026-08-27'); // غيّر التاريخ لتاريخ جوازكم
+  const days = Math.floor((new Date() - start) / (1000*60*60*24));
+  document.getElementById('days').textContent = days;
+</script>
+
+  <script>
+    // قلوب متحركة في الخلفية
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+      heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+
+</body>
+
+</html>
